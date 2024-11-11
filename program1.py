@@ -1,9 +1,4 @@
 class Solution:
-   
-    def getTotalIsles(self, grid: list[list[str]]) -> int:
-    #    write your code here
-        class Solution:
-   
     def getTotalIsles(self, grid: list[list[str]]) -> int:
         # Helper function to perform DFS
         def dfs(i, j):
@@ -36,23 +31,26 @@ class Solution:
 
 
 # Test cases
-grid1 = [
-    ["L", "L", "L", "L", "W"],
-    ["L", "L", "W", "L", "W"],
-    ["L", "L", "W", "W", "W"],
-    ["W", "W", "W", "W", "W"]
-]
-solution = Solution()
-print(solution.getTotalIsles(grid1))  # Output: 1
+if __name__ == "__main__":
+    # Test case 1: One large island
+    grid1 = [
+        ["L", "L", "L", "L", "W"],
+        ["L", "L", "W", "L", "W"],
+        ["L", "L", "W", "W", "W"],
+        ["W", "W", "W", "W", "W"]
+    ]
+    solution = Solution()
+    print(solution.getTotalIsles(grid1))  # Expected Output: 1
 
-grid2 = [
-    ["L", "L", "W", "W", "W"],
-    ["L", "L", "W", "W", "W"],
-    ["W", "W", "L", "W", "W"],
-    ["W", "W", "W", "L", "L"]
-]
-solution = Solution()
-print(solution.getTotalIsles(grid2))  # Output: 3
-
-
-    
+    # Test case 2: Three separate islands
+    grid2 = [
+        ["L", "L", "W", "W", "W"],
+        ["L", "L", "W", "W", "W"],
+        ["W", "W", "L", "W", "W"],
+        ["W", "W", "W", "L", "L"]
+    ]
+    solution = Solution()
+    print(solution.getTotalIsles(grid2))  # Expected Output: 3
+ 
+         
+        
