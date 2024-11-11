@@ -51,6 +51,3 @@ if __name__ == "__main__":
     ]
     solution = Solution()
     print(solution.getTotalIsles(grid2))  # Expected Output: 3
- 
-         
-        
