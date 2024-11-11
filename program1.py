@@ -48,4 +48,4 @@ grid = [
 solution = Solution()
 print(solution.getTotalIsles(grid))  # Output: 3
 
-    return 0
+    
