@@ -2,7 +2,11 @@ class Solution:
    
     def getTotalIsles(self, grid: list[list[str]]) -> int:
     #    write your code here
-       def dfs(i, j):
+        class Solution:
+   
+    def getTotalIsles(self, grid: list[list[str]]) -> int:
+        # Helper function to perform DFS
+        def dfs(i, j):
             # If the current position is out of bounds or is water ('W'), return
             if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 'W':
                 return
@@ -30,22 +34,25 @@ class Solution:
         
         return island_count
 
-       grid = [
+
+# Test cases
+grid1 = [
     ["L", "L", "L", "L", "W"],
     ["L", "L", "W", "L", "W"],
     ["L", "L", "W", "W", "W"],
     ["W", "W", "W", "W", "W"]
 ]
 solution = Solution()
-print(solution.getTotalIsles(grid))  # Output: 1
+print(solution.getTotalIsles(grid1))  # Output: 1
 
-grid = [
+grid2 = [
     ["L", "L", "W", "W", "W"],
     ["L", "L", "W", "W", "W"],
     ["W", "W", "L", "W", "W"],
     ["W", "W", "W", "L", "L"]
 ]
 solution = Solution()
-print(solution.getTotalIsles(grid))  # Output: 3
+print(solution.getTotalIsles(grid2))  # Output: 3
+
 
     
