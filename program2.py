@@ -12,10 +12,9 @@ def decode_message( s: str, p: str) -> bool:
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             if p[j - 1] == s[i - 1] or p[j - 1] == '?':
-                dp[i][j] = dp[i - 1][j - 1]  # Exact match or '?' match
+                dp[i][j] = dp[i - 1][j - 1]  
             elif p[j - 1] == '*':
-                dp[i][j] = dp[i - 1][j] or dp[i][j - 1]  # '*' can match empty or one/more chars
-    return dp[m][n]
+                dp[i][j] = dp[i - 1][j] or dp[i][j - 1]   
 print(decode_message("aa", "*"))   
 print(decode_message("aa", "a"))   
 print(decode_message("cb", "?a"))   
